@@ -6,7 +6,7 @@ myVideo.muted = true
 var peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    port: '3030'
+    port: '443'
 });
 
 let myVideoStream
@@ -76,7 +76,7 @@ const setMuteButton = () => {
       <span>Mute</span>
     `
     document.querySelector('.main__mute__btn').innerHTML = html;
-  }
+}
 
 const setUnmuteButton = () => {
     const html = `
@@ -89,28 +89,28 @@ const setUnmuteButton = () => {
 const playStop = () => {
     let enabled = myVideoStream.getVideoTracks()[0].enabled;
     if (enabled) {
-      myVideoStream.getVideoTracks()[0].enabled = false;
-      setPlayVideo()
+        myVideoStream.getVideoTracks()[0].enabled = false;
+        setPlayVideo()
     } else {
-      setStopVideo()
-      myVideoStream.getVideoTracks()[0].enabled = true;
+        setStopVideo()
+        myVideoStream.getVideoTracks()[0].enabled = true;
     }
 }
 
 const setStopVideo = () => {
-const html = `
+    const html = `
     <i class="fas fa-video"></i>
     <span>Stop Video</span>
 `
-document.querySelector('.main__video__btn').innerHTML = html;
+    document.querySelector('.main__video__btn').innerHTML = html;
 }
 
 const setPlayVideo = () => {
-const html = `
+    const html = `
 <i class="stop fas fa-video-slash"></i>
     <span>Play Video</span>
 `
-document.querySelector('.main__video__btn').innerHTML = html;
+    document.querySelector('.main__video__btn').innerHTML = html;
 }
 
 
