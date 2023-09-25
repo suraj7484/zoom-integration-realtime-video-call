@@ -1,2 +1,2 @@
 # zoom-clone
-Zoom clone with Node JS. I hope you Guys like it.
+Zoom clone with Node JS.
